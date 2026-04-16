@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Flow | Gérez votre entreprise. Simplement.</title>
+    <meta name="description" content="La plateforme de gestion tout-en-un conçue pour les PME marocaines. Facturation, stock, achats et plus encore.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">AF</div>
+                <span>Atlas Flow</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#pricing" class="btn btn-primary">Commencer gratuitement</a>
+                <button class="menu-toggle" id="menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#features">Fonctionnalités</a>
+        <a href="#modules">Modules</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#pricing" class="btn btn-primary">Démarrer gratuitement</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge reveal">Solution Tout-en-un</span>
+            <h1 class="reveal">Gérez votre entreprise. Simplement.</h1>
+            <p class="reveal">Facturation, stock, achats, dépenses et analytiques — tout en un seul endroit. Conçu pour les PME marocaines.</p>
+            
+            <div class="hero-btns reveal">
+                <a href="#pricing" class="btn btn-primary">Démarrer maintenant</a>
+                <a href="#" class="btn btn-outline">Voir la démo</a>
+            </div>
+
+            <!-- Dashboard Mockup -->
+            <div class="mockup-container reveal">
+                <div class="mockup-sidebar">
+                    <div class="item active"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div style="margin-top: auto;" class="item"></div>
+                </div>
+                <div class="mockup-main">
+                    <div class="mockup-header">
+                        <div class="mockup-title"></div>
+                        <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--border);"></div>
+                    </div>
+                    <div class="mockup-stats">
+                        <div class="mockup-stat-card">
+                            <div class="mockup-stat-label"></div>
+                            <div class="mockup-stat-value"></div>
+                        </div>
+                        <div class="mockup-stat-card">
+                            <div class="mockup-stat-label"></div>
+                            <div class="mockup-stat-value" style="background: #ECFDF5;"></div>
+                        </div>
+                        <div class="mockup-stat-card">
+                            <div class="mockup-stat-label"></div>
+                            <div class="mockup-stat-value" style="background: #FFFBEB;"></div>
+                        </div>
+                    </div>
+                    <div class="mockup-chart">
+                        <svg class="mockup-chart-svg" viewBox="0 0 800 300" preserveAspectRatio="none">
+                            <path d="M0,250 L100,200 L200,220 L300,150 L400,180 L500,80 L600,100 L700,50 L800,70" 
+                                  fill="none" stroke="#1D4ED8" stroke-width="4" stroke-linecap="round" />
+                            <path d="M0,250 L100,200 L200,220 L300,150 L400,180 L500,80 L600,100 L700,50 L800,70 V300 H0 Z" 
+                                  fill="url(#gradient)" opacity="0.1" />
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1D4ED8;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div style="position: absolute; bottom: 10px; left: 24px; color: var(--text-muted); font-size: 10px;">Jan</div>
+                        <div style="position: absolute; bottom: 10px; left: 50%; color: var(--text-muted); font-size: 10px;">Juin</div>
+                        <div style="position: absolute; bottom: 10px; right: 24px; color: var(--text-muted); font-size: 10px;">Déc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof">
+        <div class="container">
+            <p>Fait confiance par des entreprises à travers le Maroc</p>
+            <div class="logo-cloud">
+                <div class="company-logo" style="font-family: serif;">Casablanca Trading</div>
+                <div class="company-logo" style="font-family: 'Inter', sans-serif;">Atlas Import</div>
+                <div class="company-logo" style="font-family: 'Helvetica', sans-serif; font-weight: 300;">Fès Négoce</div>
+                <div class="company-logo" style="font-family: 'Arial Black', sans-serif;">Marrakech Supplies</div>
+                <div class="company-logo" style="font-family: 'Georgia', serif; font-style: italic;">Tanger Pro</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Tout ce dont votre entreprise a besoin</h2>
+                <p>Une solution complète pour gérer chaque aspect de votre activité avec une interface intuitive.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="file-text"></i></div>
+                    <h3>Facturation intelligente</h3>
+                    <p>Créez des factures professionnelles, suivez les paiements, relancez les impayés automatiquement.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="package"></i></div>
+                    <h3>Gestion des stocks</h3>
+                    <p>Surveillez vos niveaux de stock en temps réel avec alertes automatiques de seuil critique.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="shopping-cart"></i></div>
+                    <h3>Achats & Fournisseurs</h3>
+                    <p>Gérez vos bons de commande et vos relations fournisseurs pour optimiser vos coûts.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+                    <h3>Analytiques avancées</h3>
+                    <p>Tableaux de bord complets pour piloter votre performance et prendre des décisions data-driven.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="file-check"></i></div>
+                    <h3>Devis & Livraisons</h3>
+                    <p>Transformez vos devis en factures en un clic et suivez le cycle de vente complet.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i data-lucide="users"></i></div>
+                    <h3>Multi-utilisateurs</h3>
+                    <p>Gérez les accès de votre équipe avec des rôles personnalisés pour sécuriser vos données.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="section-padding modules-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Modules disponibles</h2>
+                <p>Chaque module est pensé spécifiquement pour le marché marocain et ses particularités.</p>
+            </div>
+            
+            <div class="modules-pills reveal">
+                <div class="module-pill"><i data-lucide="trending-up"></i> Ventes</div>
+                <div class="module-pill"><i data-lucide="shopping-bag"></i> Achats</div>
+                <div class="module-pill"><i data-lucide="archive"></i> Stock</div>
+                <div class="module-pill"><i data-lucide="receipt"></i> Factures</div>
+                <div class="module-pill"><i data-lucide="file-edit"></i> Devis</div>
+                <div class="module-pill"><i data-lucide="truck"></i> Bons de Livraison</div>
+                <div class="module-pill"><i data-lucide="clipboard"></i> Bons de Commande</div>
+                <div class="module-pill"><i data-lucide="credit-card"></i> Dépenses</div>
+                <div class="module-pill"><i data-lucide="refresh-ccw"></i> Retours</div>
+                <div class="module-pill"><i data-lucide="briefcase"></i> Fournisseurs</div>
+                <div class="module-pill"><i data-lucide="users-2"></i> Clients</div>
+                <div class="module-pill"><i data-lucide="pie-chart"></i> Analytiques</div>
+                <div class="module-pill"><i data-lucide="shield-check"></i> Utilisateurs</div>
+                <div class="module-pill"><i data-lucide="building"></i> Profil Entreprise</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Lancez-vous en 3 étapes</h2>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-item reveal">
+                    <div class="step-number">1</div>
+                    <h3>Créez votre compte</h3>
+                    <p>Inscrivez-vous en quelques secondes, configurez votre profil entreprise avec votre ICE et logo.</p>
+                </div>
+                <div class="step-item reveal">
+                    <div class="step-number">2</div>
+                    <h3>Configurez vos données</h3>
+                    <p>Ajoutez vos produits, clients et fournisseurs. Le système est prêt à l'emploi en quelques minutes.</p>
+                </div>
+                <div class="step-item reveal">
+                    <div class="step-number">3</div>
+                    <h3>Gérez et analysez</h3>
+                    <p>Créez des documents, suivez vos finances et prenez de meilleures décisions grâce aux analytiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Ce que disent nos clients</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="quote">"Atlas Flow a transformé notre gestion. On passe 3x moins de temps sur la facturation et les relances."</p>
+                    <div class="author">
+                        <span class="author-name">Karim B.</span>
+                        <span class="author-info">Directeur, Casablanca Trading</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="quote">"Enfin un logiciel pensé pour le marché marocain. L'ICE, la TVA, tout est là dès la configuration."</p>
+                    <div class="author">
+                        <span class="author-name">Fatima Z.</span>
+                        <span class="author-info">Gérante, Atlas Import</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <p class="quote">"Les analytiques nous ont aidé à identifier nos meilleurs clients et produits en un coup d'œil."</p>
+                    <div class="author">
+                        <span class="author-name">Youssef M.</span>
+                        <span class="author-info">CEO, Fès Négoce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section-padding pricing-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Tarifs simples et transparents</h2>
+                <p>Sans engagement. Sans frais cachés. Évoluez à votre rythme.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">0 DH<span>/mois</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" size="18"></i> 1 utilisateur</li>
+                        <li><i data-lucide="check" size="18"></i> Modules de base</li>
+                        <li><i data-lucide="check" size="18"></i> 50 factures / mois</li>
+                        <li><i data-lucide="check" size="18"></i> Support par email</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Choisir Starter</a>
+                </div>
+                
+                <!-- Business -->
+                <div class="pricing-card popular reveal">
+                    <div class="popular-badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3>Business</h3>
+                        <div class="price">299 DH<span>/mois</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" size="18"></i> 5 utilisateurs</li>
+                        <li><i data-lucide="check" size="18"></i> Tous les modules inclus</li>
+                        <li><i data-lucide="check" size="18"></i> Documents illimités</li>
+                        <li><i data-lucide="check" size="18"></i> Rapports avancés</li>
+                        <li><i data-lucide="check" size="18"></i> Support prioritaire</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Démarrer Business</a>
+                </div>
+                
+                <!-- Enterprise -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">Sur devis</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" size="18"></i> Utilisateurs illimités</li>
+                        <li><i data-lucide="check" size="18"></i> Support dédié 24/7</li>
+                        <li><i data-lucide="check" size="18"></i> Formation de l'équipe</li>
+                        <li><i data-lucide="check" size="18"></i> API & Intégrations</li>
+                        <li><i data-lucide="check" size="18"></i> Hébergement dédié</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container reveal">
+            <h2>Prêt à transformer votre gestion ?</h2>
+            <p>Rejoignez les entreprises marocaines qui font confiance à Atlas Flow pour piloter leur croissance.</p>
+            <a href="#pricing" class="btn btn-white">Commencer gratuitement</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">AF</div>
+                        <span>Atlas Flow</span>
+                    </a>
+                    <p>La plateforme de gestion moderne pour les PME marocaines. Simple, efficace et sécurisée.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#modules">Modules</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#">Mises à jour</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Académie</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atlas Flow. Tous droits réservés.</p>
+                <p>Fait au Maroc avec <span style="color: #ef4444;">❤</span> 🇲🇦</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
