@@ -46,7 +46,10 @@ body {
     padding: 100px 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
     color: var(--text);
     line-height: 1.2;
@@ -139,9 +142,7 @@ nav .container {
     font-size: 1.25rem;
 }
 
-.logo-icon {
-    background-color: var(--primary);
-    color: var(--white);
+.logo-icon img {
     width: 36px;
     height: 36px;
     border-radius: 8px;
@@ -165,7 +166,8 @@ nav .container {
     transition: var(--transition);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--primary);
 }
 
@@ -182,6 +184,11 @@ nav .container {
     cursor: pointer;
     color: var(--text);
 }
+
+.mobile-menu {
+    display: none;
+}
+
 
 /* --- Hero Section --- */
 .hero {
@@ -731,19 +738,24 @@ footer {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
     .pricing-card.popular {
         transform: scale(1);
     }
+
     .steps-container::before {
         display: none;
     }
+
     .steps-container {
         flex-direction: column;
     }
 }
 
 @media (max-width: 768px) {
-    .nav-links, .nav-cta .btn {
+
+    .nav-links,
+    .nav-cta .btn {
         display: none;
     }
 
@@ -780,8 +792,13 @@ footer {
         display: none;
         flex-direction: column;
         gap: 20px;
-        box-shadow: var(--shadow-lg);
         z-index: 999;
+    }
+
+    .mobile-menu a:not(.btn) {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
     }
 
     .mobile-menu.active {
