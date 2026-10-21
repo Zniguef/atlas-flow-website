@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TESZN3JE30"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TESZN3JE30');
+        // Register conversion event in GA4
+        gtag('event', 'conversion', { 'send_to': 'G-TESZN3JE30' });
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '26285528591106764');
+        fbq('track', 'PageView');
+        // Primary Conversion Event: Lead
+        fbq('track', 'Lead');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=26285528591106764&ev=Lead&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre demande | Atlas Flow</title>
+    <meta name="description" content="Votre demande d'activation pour Atlas Flow a été enregistrée avec succès.">
+    <!-- Prevent search engines from indexing conversion thank-you page directly -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://atlasflow.online/merci.html">
+
+    <!-- Google Fonts: Inter (Non-render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    </noscript>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+
+    <!-- Lucide Icons CDN (Minified & Deferred) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-to-content">Passer au contenu principal</a>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36">
+                </div>
+                <span>Atlas Flow</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html#features">Fonctionnalités</a></li>
+                <li><a href="index.html#modules">Modules</a></li>
+                <li><a href="index.html#pricing">Tarifs</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/212607003733" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Support WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content" class="thankyou-wrapper">
+        <div class="thankyou-card">
+            <div class="thankyou-icon">
+                <i data-lucide="check-circle-2"></i>
+            </div>
+            <h1>Demande Reçue avec Succès !</h1>
+            <p class="thankyou-subtitle" id="thankyou-message">
+                Merci <strong id="lead-name"></strong> ! Nous avons bien reçu votre demande.
+            </p>
+
+            <div class="thankyou-steps">
+                <div class="thankyou-steps-title">
+                    <i data-lucide="clock"></i>
+                    <span>Que va-t-il se passer maintenant ?</span>
+                </div>
+                <div class="thankyou-step-item">
+                    <div class="thankyou-step-num">1</div>
+                    <div>
+                        <strong>Premier contact</strong> : Un conseiller vous contacte pour comprendre votre activité et vos besoins spécifiques.
+                    </div>
+                </div>
+                <div class="thankyou-step-item">
+                    <div class="thankyou-step-num">2</div>
+                    <div>
+                        <strong>Démonstration en ligne</strong> : Nous fixons une réunion en ligne pour discuter de votre entreprise en détail et vous présenter Atlas Flow.
+                    </div>
+                </div>
+                <div class="thankyou-step-item">
+                    <div class="thankyou-step-num">3</div>
+                    <div>
+                        <strong>7 jours d'essai gratuit</strong> : Vous profitez ensuite de vos 7 jours d'essai gratuit sans aucun engagement pour tester la plateforme.
+                    </div>
+                </div>
+            </div>
+
+            <div class="thankyou-actions">
+                <a href="https://wa.me/212607003733?text=Bonjour%20Atlas%20Flow%2C%20je%20viens%20d%27envoyer%20ma%20demande%20d%27activation." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="message-circle" style="width: 18px; height: 18px; margin-right: 8px;"></i>
+                    <span>Accélérer sur WhatsApp</span>
+                </a>
+                <a href="index.html" class="btn btn-outline">
+                    <span>Retour à l'accueil</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36" loading="lazy">
+                        </div>
+                        <span>Atlas Flow</span>
+                    </a>
+                    <p>La plateforme de gestion moderne pour les PME marocaines. Simple, efficace et sécurisée.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Produit</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Fonctionnalités</a></li>
+                        <li><a href="index.html#modules">Modules</a></li>
+                        <li><a href="index.html#pricing">Tarifs</a></li>
+                        <li><a href="index.html#contact">Formulaire d'activation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact & Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/212607003733" target="_blank" rel="noopener noreferrer">WhatsApp direct</a></li>
+                        <li><a href="mailto:atlasflow.online@gmail.com">contact@atlasflow.online</a></li>
+                        <li><a href="index.html#contact">Demander une démo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Atlas Flow. Tous droits réservés. • <a href="privacy-policy.html">Politique de Confidentialité</a></p>
+                <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+                <p>Développé par <a href="https://zm-acquisition.com" target="_blank" rel="noopener noreferrer">ZM Acquisition</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js?v=1.2" defer></script>
+    <script>
+        // Personalize thank you greeting from URL params
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const nameEl = document.getElementById('lead-name');
+            const msgEl = document.getElementById('thankyou-message');
+            if (name && nameEl) {
+                nameEl.textContent = name;
+            } else if (!name && msgEl) {
+                msgEl.textContent = "Nous avons bien reçu votre demande.";
+            }
+        });
+    </script>
+</body>
+
+</html>

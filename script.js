@@ -350,15 +350,40 @@ if (leadForm) {
                 console.warn("L'URL Google Apps Script n'est pas configurée. Simulation d'envoi.");
             }
 
-            // Populate success text
+            // Track Conversion Events (Meta Pixel & GA4)
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', {
+                        content_name: planVal,
+                        currency: 'MAD'
+                    });
+                }
+                if (typeof gtag === 'function') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'form',
+                        event_label: planVal
+                    });
+                }
+            } catch (trackErr) {
+                console.warn('Tracking error:', trackErr);
+            }
+
+            // Populate success text fallback
             if (successUser) successUser.textContent = nameVal;
             if (successPhone) successPhone.textContent = phoneVal;
 
-            // Toggle views
+            // Toggle views fallback
             leadForm.style.display = 'none';
             if (successMessage) {
                 successMessage.style.display = 'flex';
             }
+
+            // Redirect to Thank You page
+            const params = new URLSearchParams({
+                name: nameVal,
+                plan: planVal
+            });
+            window.location.href = `merci.html?${params.toString()}`;
         } catch (error) {
             console.error('Error!', error.message);
             alert("Une erreur s'est produite lors de l'envoi. Veuillez réessayer.");
