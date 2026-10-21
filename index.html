@@ -14,34 +14,123 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Flow | Gérez votre entreprise. Simplement.</title>
+    <title>Atlas Flow | Gérez votre entreprise Simplement</title>
     <meta name="description"
         content="La plateforme de gestion tout-en-un conçue pour les PME marocaines. Facturation, stock, achats et plus encore.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://atlasflow.online/">
     <meta name="google-site-verification" content="LXuMGAOooZATqfx1YpVgThPNsksTRE4h91MC763Mqxw" />
 
-    <!-- Google Fonts: Inter -->
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atlasflow.online/">
+    <meta property="og:title" content="Atlas Flow | Gérez votre entreprise Simplement">
+    <meta property="og:description"
+        content="La plateforme de gestion tout-en-un conçue pour les PME marocaines. Facturation, stock, achats et plus encore.">
+    <meta property="og:image" content="https://atlasflow.online/images/img1.webp">
+    <meta property="og:image:alt" content="Atlas Flow Tableau de bord de gestion">
+    <meta property="og:site_name" content="Atlas Flow">
+    <meta property="og:locale" content="fr_MA">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://atlasflow.online/">
+    <meta name="twitter:title" content="Atlas Flow | Gérez votre entreprise Simplement">
+    <meta name="twitter:description"
+        content="La plateforme de gestion tout-en-un conçue pour les PME marocaines. Facturation, stock, achats et plus encore.">
+    <meta name="twitter:image" content="https://atlasflow.online/images/img1.webp">
+
+    <!-- Structured Data (Schema.org JSON-LD for Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://atlasflow.online/#software",
+          "name": "Atlas Flow",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "url": "https://atlasflow.online/",
+          "description": "La plateforme de gestion tout-en-un conçue pour les PME marocaines. Facturation, stock, achats et plus encore.",
+          "image": "https://atlasflow.online/images/img1.webp",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Essai Gratuit",
+              "price": "0",
+              "priceCurrency": "MAD",
+              "description": "7 jours offerts sans engagement"
+            },
+            {
+              "@type": "Offer",
+              "name": "Mensuel Essentiel",
+              "price": "350",
+              "priceCurrency": "MAD",
+              "billingDuration": "P1M"
+            },
+            {
+              "@type": "Offer",
+              "name": "Annuel Tout Inclus",
+              "price": "3500",
+              "priceCurrency": "MAD",
+              "billingDuration": "P1Y"
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://atlasflow.online/#organization",
+          "name": "Atlas Flow",
+          "url": "https://atlasflow.online/",
+          "logo": "https://atlasflow.online/images/logo.webp",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+212-607-003733",
+            "contactType": "customer service",
+            "areaServed": "MA",
+            "availableLanguage": ["French", "Arabic"]
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Preload Critical Hero Image -->
+    <link rel="preload" as="image" href="images/img1.webp" fetchpriority="high">
+
+    <!-- Google Fonts: Inter (Non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    </noscript>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+
+    <!-- Lucide Icons CDN (Minified & Deferred) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 
 <body>
+    <!-- Skip to main content link for keyboard & screen reader accessibility -->
+    <a href="#main-content" class="skip-to-content">Passer au contenu principal</a>
 
     <!-- Navbar -->
     <nav id="navbar">
         <div class="container">
             <a href="#" class="logo">
                 <div class="logo-icon">
-                    <img src="images/logo.png" alt="Logo">
+                    <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36">
                 </div>
                 <span>Atlas Flow</span>
             </a>
@@ -54,10 +143,11 @@
             </ul>
 
             <div class="nav-cta">
-                <a href="https://wa.me/212611678243" class="btn btn-primary" target="_blank"
+                <a href="https://wa.me/212607003733" class="btn btn-primary" target="_blank"
                     rel="noopener noreferrer">Activer mon espace</a>
-                <button class="menu-toggle" id="menu-btn">
-                    <i data-lucide="menu"></i>
+                <button class="menu-toggle" id="menu-btn" aria-label="Ouvrir le menu de navigation"
+                    aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-lucide="menu" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -69,36 +159,41 @@
         <a href="#modules">Modules</a>
         <!-- <a href="#testimonials">Témoignages</a> -->
         <a href="#pricing">Tarifs</a>
-        <a href="https://wa.me/212611678243" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Activer
+        <a href="https://wa.me/212607003733" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Activer
             mon espace</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <span class="badge reveal">Solution Tout-en-un</span>
-            <h1 class="reveal">Gérez votre entreprise Simplement</h1>
-            <p class="reveal">Facturation, stock, achats, dépenses et analytiques, tout en un seul endroit. Conçu pour
-                les PME marocaines.</p>
+    <!-- Main Content Landmark -->
+    <main id="main-content">
 
-            <div class="hero-btns reveal">
-                <a href="https://wa.me/212611678243" class="btn btn-primary" target="_blank"
-                    rel="noopener noreferrer">Activer mon espace</a>
-                <a href="https://wa.me/212611678243" class="btn btn-outline" target="_blank"
-                    rel="noopener noreferrer">Voir la démo</a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="badge reveal">Solution Tout-en-un</span>
+                <h1 class="reveal">Gérez votre entreprise Simplement</h1>
+                <p class="reveal">Facturation, stock, achats, dépenses et analytiques, tout en un seul endroit. Conçu
+                    pour
+                    les PME marocaines.</p>
+
+                <div class="hero-btns reveal">
+                    <a href="https://wa.me/212607003733" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer">Activer mon espace</a>
+                    <a href="https://wa.me/212607003733" class="btn btn-outline" target="_blank"
+                        rel="noopener noreferrer">Voir la démo</a>
+                </div>
+
+                <!-- Dashboard Image -->
+                <div class="reveal"
+                    style="max-width: 1000px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); border: 1px solid var(--border);">
+                    <img src="images/img1.webp" alt="Tableau de bord de gestion Atlas Flow" width="1918" height="863"
+                        fetchpriority="high" loading="eager" decoding="async"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
             </div>
+        </section>
 
-            <!-- Dashboard Image -->
-            <div class="reveal"
-                style="max-width: 1000px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); border: 1px solid var(--border);">
-                <img src="images/img1.png" alt="Atlas Flow Dashboard"
-                    style="width: 100%; height: auto; display: block;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof Bar -->
-    <!--
+        <!-- Social Proof Bar -->
+        <!--
     <div class="social-proof">
         <div class="container">
             <p>Fait confiance par des entreprises à travers le Maroc</p>
@@ -114,117 +209,122 @@
     </div>
     -->
 
-    <!-- Features Section -->
-    <section id="features" class="section-padding">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Tout ce dont votre entreprise a besoin</h2>
-                <p>Une solution complète pour gérer chaque aspect de votre activité avec une interface intuitive.</p>
-            </div>
-
-            <div class="features-grid">
-                <!-- Card 1 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="file-text"></i></div>
-                    <h3>Facturation intelligente</h3>
-                    <p>Créez des factures professionnelles, suivez les paiements, relancez les impayés.
+        <!-- Features Section -->
+        <section id="features" class="section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Tout ce dont votre entreprise a besoin</h2>
+                    <p>Une solution complète pour gérer chaque aspect de votre activité avec une interface intuitive.
                     </p>
                 </div>
-                <!-- Card 2 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="package"></i></div>
-                    <h3>Gestion des stocks</h3>
-                    <p>Surveillez vos niveaux de stock en temps réel avec alertes automatiques de seuil critique.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="shopping-cart"></i></div>
-                    <h3>Achats & Fournisseurs</h3>
-                    <p>Gérez vos bons de commande et vos relations fournisseurs pour optimiser vos coûts.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
-                    <h3>Analytiques avancées</h3>
-                    <p>Tableaux de bord complets pour piloter votre performance et prendre des décisions data-driven.
-                    </p>
-                </div>
-                <!-- Card 5 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="file-check"></i></div>
-                    <h3>Devis & Livraisons</h3>
-                    <p>Transformez vos devis en factures en un clic et suivez le cycle de vente complet.</p>
-                </div>
-                <!-- Card 6 -->
-                <div class="feature-card reveal">
-                    <div class="feature-icon"><i data-lucide="users"></i></div>
-                    <h3>Multi-utilisateurs</h3>
-                    <p>Gérez les accès de votre équipe avec des rôles personnalisés pour sécuriser vos données.</p>
+
+                <div class="features-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="file-text"></i></div>
+                        <h3>Facturation intelligente</h3>
+                        <p>Créez des factures professionnelles, suivez les paiements, relancez les impayés.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="package"></i></div>
+                        <h3>Gestion des stocks</h3>
+                        <p>Surveillez vos niveaux de stock en temps réel avec alertes automatiques de seuil critique.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="shopping-cart"></i></div>
+                        <h3>Achats & Fournisseurs</h3>
+                        <p>Gérez vos bons de commande et vos relations fournisseurs pour optimiser vos coûts.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+                        <h3>Analytiques avancées</h3>
+                        <p>Tableaux de bord complets pour piloter votre performance et prendre des décisions
+                            data-driven.
+                        </p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="file-check"></i></div>
+                        <h3>Devis & Livraisons</h3>
+                        <p>Transformez vos devis en factures en un clic et suivez le cycle de vente complet.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon"><i data-lucide="users"></i></div>
+                        <h3>Multi-utilisateurs</h3>
+                        <p>Gérez les accès de votre équipe avec des rôles personnalisés pour sécuriser vos données.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Modules Section -->
-    <section id="modules" class="section-padding modules-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Modules disponibles</h2>
-                <p>Chaque module est pensé spécifiquement pour le marché marocain et ses particularités.</p>
-            </div>
-
-            <div class="modules-pills reveal">
-                <div class="module-pill"><i data-lucide="trending-up"></i> Ventes</div>
-                <div class="module-pill"><i data-lucide="shopping-bag"></i> Achats</div>
-                <div class="module-pill"><i data-lucide="archive"></i> Stock</div>
-                <div class="module-pill"><i data-lucide="receipt"></i> Factures</div>
-                <div class="module-pill"><i data-lucide="file-edit"></i> Devis</div>
-                <div class="module-pill"><i data-lucide="truck"></i> Bons de Livraison</div>
-                <div class="module-pill"><i data-lucide="clipboard"></i> Bons de Commande</div>
-                <div class="module-pill"><i data-lucide="credit-card"></i> Dépenses</div>
-                <div class="module-pill"><i data-lucide="refresh-ccw"></i> Retours</div>
-                <div class="module-pill"><i data-lucide="briefcase"></i> Fournisseurs</div>
-                <div class="module-pill"><i data-lucide="users-2"></i> Clients</div>
-                <div class="module-pill"><i data-lucide="pie-chart"></i> Analytiques</div>
-                <div class="module-pill"><i data-lucide="shield-check"></i> Utilisateurs</div>
-                <div class="module-pill"><i data-lucide="building"></i> Profil Entreprise</div>
-                <div class="module-pill"><i data-lucide="building"></i> Soldes et Paiements</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Lancez-vous en 3 étapes</h2>
-            </div>
-
-            <div class="steps-container">
-                <div class="step-item reveal">
-                    <div class="step-number">1</div>
-                    <h3>Créez votre compte</h3>
-                    <p>Inscrivez-vous en quelques secondes, configurez votre profil entreprise avec votre ICE et logo.
-                    </p>
+        <!-- Modules Section -->
+        <section id="modules" class="section-padding modules-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Modules disponibles</h2>
+                    <p>Chaque module est pensé spécifiquement pour le marché marocain et ses particularités.</p>
                 </div>
-                <div class="step-item reveal">
-                    <div class="step-number">2</div>
-                    <h3>Configurez vos données</h3>
-                    <p>Ajoutez vos produits, clients et fournisseurs. Le système est prêt à l'emploi en quelques
-                        minutes.</p>
-                </div>
-                <div class="step-item reveal">
-                    <div class="step-number">3</div>
-                    <h3>Gérez et analysez</h3>
-                    <p>Créez des documents, suivez vos finances et prenez de meilleures décisions grâce aux analytiques.
-                    </p>
+
+                <div class="modules-pills reveal">
+                    <div class="module-pill"><i data-lucide="trending-up"></i> Ventes</div>
+                    <div class="module-pill"><i data-lucide="shopping-bag"></i> Achats</div>
+                    <div class="module-pill"><i data-lucide="archive"></i> Stock</div>
+                    <div class="module-pill"><i data-lucide="receipt"></i> Factures</div>
+                    <div class="module-pill"><i data-lucide="file-edit"></i> Devis</div>
+                    <div class="module-pill"><i data-lucide="truck"></i> Bons de Livraison</div>
+                    <div class="module-pill"><i data-lucide="clipboard"></i> Bons de Commande</div>
+                    <div class="module-pill"><i data-lucide="credit-card"></i> Dépenses</div>
+                    <div class="module-pill"><i data-lucide="refresh-ccw"></i> Retours</div>
+                    <div class="module-pill"><i data-lucide="briefcase"></i> Fournisseurs</div>
+                    <div class="module-pill"><i data-lucide="users-2"></i> Clients</div>
+                    <div class="module-pill"><i data-lucide="pie-chart"></i> Analytiques</div>
+                    <div class="module-pill"><i data-lucide="shield-check"></i> Utilisateurs</div>
+                    <div class="module-pill"><i data-lucide="building"></i> Profil Entreprise</div>
+                    <div class="module-pill"><i data-lucide="building"></i> Soldes et Paiements</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials -->
-    <!--
+        <!-- How It Works -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Lancez-vous en 3 étapes</h2>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-item reveal">
+                        <div class="step-number">1</div>
+                        <h3>Créez votre compte</h3>
+                        <p>Inscrivez-vous en quelques secondes, configurez votre profil entreprise avec votre ICE et
+                            logo.
+                        </p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">2</div>
+                        <h3>Configurez vos données</h3>
+                        <p>Ajoutez vos produits, clients et fournisseurs. Le système est prêt à l'emploi en quelques
+                            minutes.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">3</div>
+                        <h3>Gérez et analysez</h3>
+                        <p>Créez des documents, suivez vos finances et prenez de meilleures décisions grâce aux
+                            analytiques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <!--
     <section id="testimonials" class="section-padding">
         <div class="container">
             <div class="section-header reveal">
@@ -273,302 +373,310 @@
     </section>
     -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="section-padding pricing-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Des tarifs transparents pour chaque besoin</h2>
-                <p>Choisissez la formule qui correspond à votre entreprise. Essayez gratuitement pendant 7 jours, sans
-                    engagement.</p>
+        <!-- Pricing Section -->
+        <section id="pricing" class="section-padding pricing-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Des tarifs transparents pour chaque besoin</h2>
+                    <p>Choisissez la formule qui correspond à votre entreprise. Essayez gratuitement pendant 7 jours,
+                        sans
+                        engagement.</p>
+                </div>
+
+                <!-- Free Trial Banner -->
+                <div class="free-trial-banner reveal">
+                    <div class="free-trial-icon">
+                        <i data-lucide="gift"></i>
+                    </div>
+                    <div class="free-trial-content">
+                        <h3>🎉 Essai Gratuit — 7 jours offerts</h3>
+                        <p>Accédez à toutes les fonctionnalités d'Atlas Flow sans carte bancaire. Aucun engagement.</p>
+                    </div>
+                    <a href="https://wa.me/212607003733" class="btn btn-trial" id="btn-free-trial" target="_blank"
+                        rel="noopener noreferrer">Commencer l'essai gratuit</a>
+                </div>
+
+                <!-- Pricing Grid -->
+                <div class="pricing-grid-new">
+
+                    <!-- Plan 1: Monthly Basic -->
+                    <div class="pricing-card-new reveal" id="plan-monthly-basic">
+                        <div class="plan-header">
+                            <div class="plan-icon plan-icon-blue">
+                                <i data-lucide="calendar"></i>
+                            </div>
+                            <h3 class="plan-name">Mensuel Essentiel</h3>
+                            <p class="plan-desc">Accès complet au système, idéal pour démarrer</p>
+                        </div>
+                        <div class="plan-price-block">
+                            <div class="plan-price">
+                                <span class="plan-amount">350</span>
+                                <span class="plan-currency">DH</span>
+                            </div>
+                            <span class="plan-period">/ mois</span>
+                        </div>
+                        <div class="plan-note plan-note-success">
+                            <i data-lucide="refresh-cw"></i>
+                            <span>Nouvelles mises à jour incluses</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
+                            <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
+                            <li><i data-lucide="check-circle"></i> Documents illimités</li>
+                            <li><i data-lucide="check-circle"></i> Hébergement sécurisé</li>
+                            <li><i data-lucide="check-circle"></i> Support technique</li>
+                            <li><i data-lucide="check-circle"></i> Nouvelles mises à jour</li>
+                        </ul>
+                        <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-monthly-basic">Choisir ce
+                            plan</a>
+                    </div>
+
+                    <!-- Plan 3: One-time payment -->
+                    <div class="pricing-card-new reveal" id="plan-onetime">
+                        <div class="plan-header">
+                            <div class="plan-icon plan-icon-green">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <h3 class="plan-name">Licence à Vie</h3>
+                            <p class="plan-desc">Achat unique, propriétaire du système pour toujours</p>
+                        </div>
+                        <div class="plan-price-block">
+                            <div class="plan-price">
+                                <span class="plan-amount">5 000</span>
+                                <span class="plan-currency">DH</span>
+                            </div>
+                            <span class="plan-period">paiement unique</span>
+                        </div>
+                        <div class="plan-note plan-note-warning">
+                            <i data-lucide="server"></i>
+                            <span>+ 1 500 DH/an (serveur + domaine)</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle"></i> Propriétaire du système</li>
+                            <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
+                            <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
+                            <li><i data-lucide="check-circle"></i> Données 100% privées</li>
+                            <li><i data-lucide="check-circle"></i> Support technique</li>
+                            <li class="plan-feature-disabled"><i data-lucide="x-circle"></i> Mises à jour automatiques
+                            </li>
+                        </ul>
+                        <div class="plan-annual-detail">
+                            <div class="plan-annual-row">
+                                <span>Licence Atlas Flow</span>
+                                <span class="plan-annual-price">5 000 DH</span>
+                            </div>
+                            <div class="plan-annual-row">
+                                <span>Serveur + Domaine (annuel)</span>
+                                <span class="plan-annual-price">1 500 DH/an</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-onetime">Choisir ce plan</a>
+                    </div>
+
+                    <!-- Plan 4: Annual -->
+                    <div class="pricing-card-new reveal" id="plan-annual">
+                        <div class="plan-header">
+                            <div class="plan-icon plan-icon-orange">
+                                <i data-lucide="crown"></i>
+                            </div>
+                            <h3 class="plan-name">Annuel Tout Inclus</h3>
+                            <p class="plan-desc">La meilleure valeur avec toutes les nouvelles fonctionnalités</p>
+                        </div>
+                        <div class="plan-price-block">
+                            <div class="plan-price">
+                                <span class="plan-amount">3 500</span>
+                                <span class="plan-currency">DH</span>
+                            </div>
+                            <span class="plan-period">/ an</span>
+                        </div>
+                        <div class="plan-savings-badge">
+                            Économisez 700 DH vs mensuel
+                        </div>
+                        <div class="plan-note plan-note-success">
+                            <i data-lucide="refresh-cw"></i>
+                            <span>Nouvelles mises à jour incluses</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
+                            <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
+                            <li><i data-lucide="check-circle"></i> Documents illimités</li>
+                            <li><i data-lucide="check-circle"></i> Hébergement sécurisé</li>
+                            <li><i data-lucide="check-circle"></i> Support technique prioritaire</li>
+                            <li><i data-lucide="check-circle"></i> Toutes les mises à jour incluses</li>
+                        </ul>
+                        <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-annual">Choisir ce plan</a>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Trust Strip -->
+                <div class="pricing-trust-strip reveal">
+                    <div class="trust-item">
+                        <i data-lucide="lock"></i>
+                        <span>Paiement 100% sécurisé</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="headphones"></i>
+                        <span>Support dédié inclus</span>
+                    </div>
+                    <div class="trust-item">
+                        <i data-lucide="clock"></i>
+                        <span>7 jours d'essai gratuit</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Free Trial Banner -->
-            <div class="free-trial-banner reveal">
-                <div class="free-trial-icon">
-                    <i data-lucide="gift"></i>
-                </div>
-                <div class="free-trial-content">
-                    <h3>🎉 Essai Gratuit — 7 jours offerts</h3>
-                    <p>Accédez à toutes les fonctionnalités d'Atlas Flow sans carte bancaire. Aucun engagement.</p>
-                </div>
-                <a href="https://wa.me/212611678243" class="btn btn-trial" id="btn-free-trial" target="_blank"
-                    rel="noopener noreferrer">Commencer l'essai gratuit</a>
-            </div>
+        <!-- Contact / Order Form Section -->
+        <section id="contact" class="section-padding contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Info Column -->
+                    <div class="contact-info reveal">
+                        <span class="badge">Démarrage Rapide</span>
+                        <h2>Prêt à simplifier votre gestion ?</h2>
+                        <p class="contact-subtitle">Complétez le formulaire en quelques secondes. Notre équipe
+                            configurera
+                            votre espace de travail personnalisé et vous guidera dans la prise en main.</p>
 
-            <!-- Pricing Grid -->
-            <div class="pricing-grid-new">
-
-                <!-- Plan 1: Monthly Basic -->
-                <div class="pricing-card-new reveal" id="plan-monthly-basic">
-                    <div class="plan-header">
-                        <div class="plan-icon plan-icon-blue">
-                            <i data-lucide="calendar"></i>
-                        </div>
-                        <h3 class="plan-name">Mensuel Essentiel</h3>
-                        <p class="plan-desc">Accès complet au système, idéal pour démarrer</p>
-                    </div>
-                    <div class="plan-price-block">
-                        <div class="plan-price">
-                            <span class="plan-amount">350</span>
-                            <span class="plan-currency">DH</span>
-                        </div>
-                        <span class="plan-period">/ mois</span>
-                    </div>
-                    <div class="plan-note plan-note-success">
-                        <i data-lucide="refresh-cw"></i>
-                        <span>Nouvelles mises à jour incluses</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
-                        <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
-                        <li><i data-lucide="check-circle"></i> Documents illimités</li>
-                        <li><i data-lucide="check-circle"></i> Hébergement sécurisé</li>
-                        <li><i data-lucide="check-circle"></i> Support technique</li>
-                        <li><i data-lucide="check-circle"></i> Nouvelles mises à jour</li>
-                    </ul>
-                    <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-monthly-basic">Choisir ce plan</a>
-                </div>
-
-                <!-- Plan 3: One-time payment -->
-                <div class="pricing-card-new reveal" id="plan-onetime">
-                    <div class="plan-header">
-                        <div class="plan-icon plan-icon-green">
-                            <i data-lucide="shield-check"></i>
-                        </div>
-                        <h3 class="plan-name">Licence à Vie</h3>
-                        <p class="plan-desc">Achat unique, propriétaire du système pour toujours</p>
-                    </div>
-                    <div class="plan-price-block">
-                        <div class="plan-price">
-                            <span class="plan-amount">5 000</span>
-                            <span class="plan-currency">DH</span>
-                        </div>
-                        <span class="plan-period">paiement unique</span>
-                    </div>
-                    <div class="plan-note plan-note-warning">
-                        <i data-lucide="server"></i>
-                        <span>+ 1 500 DH/an (serveur + domaine)</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i data-lucide="check-circle"></i> Propriétaire du système</li>
-                        <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
-                        <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
-                        <li><i data-lucide="check-circle"></i> Données 100% privées</li>
-                        <li><i data-lucide="check-circle"></i> Support technique</li>
-                        <li class="plan-feature-disabled"><i data-lucide="x-circle"></i> Mises à jour automatiques</li>
-                    </ul>
-                    <div class="plan-annual-detail">
-                        <div class="plan-annual-row">
-                            <span>Licence Atlas Flow</span>
-                            <span class="plan-annual-price">5 000 DH</span>
-                        </div>
-                        <div class="plan-annual-row">
-                            <span>Serveur + Domaine (annuel)</span>
-                            <span class="plan-annual-price">1 500 DH/an</span>
-                        </div>
-                    </div>
-                    <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-onetime">Choisir ce plan</a>
-                </div>
-
-                <!-- Plan 4: Annual -->
-                <div class="pricing-card-new reveal" id="plan-annual">
-                    <div class="plan-header">
-                        <div class="plan-icon plan-icon-orange">
-                            <i data-lucide="crown"></i>
-                        </div>
-                        <h3 class="plan-name">Annuel Tout Inclus</h3>
-                        <p class="plan-desc">La meilleure valeur avec toutes les nouvelles fonctionnalités</p>
-                    </div>
-                    <div class="plan-price-block">
-                        <div class="plan-price">
-                            <span class="plan-amount">3 500</span>
-                            <span class="plan-currency">DH</span>
-                        </div>
-                        <span class="plan-period">/ an</span>
-                    </div>
-                    <div class="plan-savings-badge">
-                        Économisez 700 DH vs mensuel
-                    </div>
-                    <div class="plan-note plan-note-success">
-                        <i data-lucide="refresh-cw"></i>
-                        <span>Nouvelles mises à jour incluses</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li><i data-lucide="check-circle"></i> Tous les modules inclus</li>
-                        <li><i data-lucide="check-circle"></i> Utilisateurs illimités</li>
-                        <li><i data-lucide="check-circle"></i> Documents illimités</li>
-                        <li><i data-lucide="check-circle"></i> Hébergement sécurisé</li>
-                        <li><i data-lucide="check-circle"></i> Support technique prioritaire</li>
-                        <li><i data-lucide="check-circle"></i> Toutes les mises à jour incluses</li>
-                    </ul>
-                    <a href="#" class="btn plan-btn plan-btn-outline" id="btn-plan-annual">Choisir ce plan</a>
-                </div>
-
-            </div>
-
-            <!-- Bottom Trust Strip -->
-            <div class="pricing-trust-strip reveal">
-                <div class="trust-item">
-                    <i data-lucide="lock"></i>
-                    <span>Paiement 100% sécurisé</span>
-                </div>
-                <div class="trust-item">
-                    <i data-lucide="headphones"></i>
-                    <span>Support dédié inclus</span>
-                </div>
-                <div class="trust-item">
-                    <i data-lucide="clock"></i>
-                    <span>7 jours d'essai gratuit</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact / Order Form Section -->
-    <section id="contact" class="section-padding contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Info Column -->
-                <div class="contact-info reveal">
-                    <span class="badge">Démarrage Rapide</span>
-                    <h2>Prêt à simplifier votre gestion ?</h2>
-                    <p class="contact-subtitle">Complétez le formulaire en quelques secondes. Notre équipe configurera
-                        votre espace de travail personnalisé et vous guidera dans la prise en main.</p>
-
-                    <div class="contact-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i data-lucide="check-circle-2"></i></div>
-                            <div>
-                                <h4>Configuration en 10 minutes</h4>
-                                <p>Votre instance Atlas Flow prête à l'emploi immédiatement.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i data-lucide="shield-alert"></i></div>
-                            <div>
-                                <h4>Aucun engagement</h4>
-                                <p>Essai gratuit de 7 jours. Aucune carte bancaire requise.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon"><i data-lucide="badge-help"></i></div>
-                            <div>
-                                <h4>Support & Accompagnement</h4>
-                                <p>Une équipe à votre écoute pour importer vos anciennes données.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form Card -->
-                <div class="contact-form-card reveal">
-                    <div class="form-header">
-                        <h3>Demande d'activation</h3>
-                        <p>Veuillez renseigner vos informations professionnelles.</p>
-                    </div>
-
-                    <form id="lead-form" class="lead-form">
-                        <!-- Name Field -->
-                        <div class="form-group">
-                            <label for="client-name">Nom Complet <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i data-lucide="user" class="input-icon"></i>
-                                <input type="text" id="client-name" name="name" placeholder="Ex: Mohamed Alami"
-                                    required>
-                            </div>
-                        </div>
-
-                        <!-- Phone Field -->
-                        <div class="form-group">
-                            <label for="client-phone">Numéro de Téléphone <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i data-lucide="phone" class="input-icon"></i>
-                                <input type="tel" id="client-phone" name="phone" placeholder="Ex: 06 12 34 56 78"
-                                    required>
-                            </div>
-                        </div>
-
-                        <!-- Company Field -->
-                        <div class="form-group">
-                            <label for="client-company">Nom de l'entreprise <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i data-lucide="building-2" class="input-icon"></i>
-                                <input type="text" id="client-company" name="company"
-                                    placeholder="Ex: Sarl Alami Trading" required>
-                            </div>
-                        </div>
-
-                        <!-- Plan Dropdown (Customized) -->
-                        <div class="form-group">
-                            <label for="client-plan-custom">Formule souhaitée <span class="required">*</span></label>
-                            <div class="custom-select-wrapper" id="custom-select-container">
-                                <div class="custom-select-trigger" id="custom-select-trigger">
-                                    <i data-lucide="layers" class="input-icon"></i>
-                                    <span class="custom-select-text" id="custom-select-display-text">Choisir une
-                                        formule...</span>
-                                    <i data-lucide="chevron-down" class="custom-select-arrow"></i>
+                        <div class="contact-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i data-lucide="check-circle-2"></i></div>
+                                <div>
+                                    <h3>Configuration en 10 minutes</h3>
+                                    <p>Votre instance Atlas Flow prête à l'emploi immédiatement.</p>
                                 </div>
-                                <div class="custom-select-options-list" id="custom-select-options">
-                                    <div class="custom-option" data-value="monthly-basic">
-                                        <div class="option-info">
-                                            <span class="option-name">Mensuel Essentiel</span>
-                                            <span class="option-desc">Mises à jour incluses</span>
-                                        </div>
-                                        <span class="option-price-tag">350 DH/mois</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i data-lucide="shield-alert"></i></div>
+                                <div>
+                                    <h3>Aucun engagement</h3>
+                                    <p>Essai gratuit de 7 jours. Aucune carte bancaire requise.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><i data-lucide="badge-help"></i></div>
+                                <div>
+                                    <h3>Support & Accompagnement</h3>
+                                    <p>Une équipe à votre écoute pour importer vos anciennes données.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-card reveal">
+                        <div class="form-header">
+                            <h3>Demande d'activation</h3>
+                            <p>Veuillez renseigner vos informations professionnelles.</p>
+                        </div>
+
+                        <form id="lead-form" class="lead-form">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="client-name">Nom Complet <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="user" class="input-icon"></i>
+                                    <input type="text" id="client-name" name="name" placeholder="Ex: Mohamed Alami"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="form-group">
+                                <label for="client-phone">Numéro de Téléphone <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="phone" class="input-icon"></i>
+                                    <input type="tel" id="client-phone" name="phone" placeholder="Ex: 06 12 34 56 78"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Company Field -->
+                            <div class="form-group">
+                                <label for="client-company">Nom de l'entreprise <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="building-2" class="input-icon"></i>
+                                    <input type="text" id="client-company" name="company"
+                                        placeholder="Ex: Sarl Alami Trading" required>
+                                </div>
+                            </div>
+
+                            <!-- Plan Dropdown (Customized) -->
+                            <div class="form-group">
+                                <label for="client-plan-custom">Formule souhaitée <span
+                                        class="required">*</span></label>
+                                <div class="custom-select-wrapper" id="custom-select-container">
+                                    <div class="custom-select-trigger" id="custom-select-trigger">
+                                        <i data-lucide="layers" class="input-icon"></i>
+                                        <span class="custom-select-text" id="custom-select-display-text">Choisir une
+                                            formule...</span>
+                                        <i data-lucide="chevron-down" class="custom-select-arrow"></i>
                                     </div>
-                                    <div class="custom-option" data-value="onetime">
-                                        <div class="option-info">
-                                            <span class="option-name">Licence à Vie</span>
-                                            <span class="option-desc">+ 1 500 DH/an</span>
-                                        </div>
-                                        <span class="option-price-tag">5 000 DH</span>
-                                    </div>
-                                    <div class="custom-option" data-value="annual">
-                                        <div class="option-info">
-                                            <div class="option-name-row">
-                                                <span class="option-name">Annuel Tout Inclus</span>
-                                                <span class="custom-badge-option savings">Économique</span>
+                                    <div class="custom-select-options-list" id="custom-select-options">
+                                        <div class="custom-option" data-value="monthly-basic">
+                                            <div class="option-info">
+                                                <span class="option-name">Mensuel Essentiel</span>
+                                                <span class="option-desc">Mises à jour incluses</span>
                                             </div>
-                                            <span class="option-desc">Mises à jour incluses</span>
+                                            <span class="option-price-tag">350 DH/mois</span>
                                         </div>
-                                        <span class="option-price-tag">3 500 DH/an</span>
+                                        <div class="custom-option" data-value="onetime">
+                                            <div class="option-info">
+                                                <span class="option-name">Licence à Vie</span>
+                                                <span class="option-desc">+ 1 500 DH/an</span>
+                                            </div>
+                                            <span class="option-price-tag">5 000 DH</span>
+                                        </div>
+                                        <div class="custom-option" data-value="annual">
+                                            <div class="option-info">
+                                                <div class="option-name-row">
+                                                    <span class="option-name">Annuel Tout Inclus</span>
+                                                    <span class="custom-badge-option savings">Économique</span>
+                                                </div>
+                                                <span class="option-desc">Mises à jour incluses</span>
+                                            </div>
+                                            <span class="option-price-tag">3 500 DH/an</span>
+                                        </div>
                                     </div>
+
+                                    <!-- Hidden Native Select for standard form validation & compatibility -->
+                                    <select id="client-plan" name="plan" required
+                                        style="display: none; visibility: hidden; opacity: 0; position: absolute; width: 0; height: 0;">
+                                        <option value="" disabled selected>Choisir une formule...</option>
+                                        <option value="monthly-basic">Mensuel Essentiel (350 DH / mois)</option>
+                                        <option value="onetime">Licence à Vie (5 000 DH + 1 500 DH/an)</option>
+                                        <option value="annual">Annuel Tout Inclus (3 500 DH / an)</option>
+                                    </select>
                                 </div>
-
-                                <!-- Hidden Native Select for standard form validation & compatibility -->
-                                <select id="client-plan" name="plan" required
-                                    style="display: none; visibility: hidden; opacity: 0; position: absolute; width: 0; height: 0;">
-                                    <option value="" disabled selected>Choisir une formule...</option>
-                                    <option value="monthly-basic">Mensuel Essentiel (350 DH / mois)</option>
-                                    <option value="onetime">Licence à Vie (5 000 DH + 1 500 DH/an)</option>
-                                    <option value="annual">Annuel Tout Inclus (3 500 DH / an)</option>
-                                </select>
                             </div>
-                        </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-submit" id="btn-submit-form">
-                            <span>Activer mon espace</span>
-                            <i data-lucide="arrow-right"></i>
-                        </button>
-                    </form>
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-submit" id="btn-submit-form">
+                                <span>Activer mon espace</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </form>
 
-                    <!-- Success Message (Hidden by default) -->
-                    <div id="form-success-message" class="form-success-card">
-                        <div class="success-icon-wrapper">
-                            <i data-lucide="badge-check"></i>
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="form-success-message" class="form-success-card">
+                            <div class="success-icon-wrapper">
+                                <i data-lucide="badge-check"></i>
+                            </div>
+                            <h3>Demande Reçue !</h3>
+                            <p>Merci <strong id="success-user-name"></strong>. Votre demande d'activation a été
+                                enregistrée
+                                avec succès.</p>
+                            <p class="success-details">Un conseiller Atlas Flow vous contactera au <strong
+                                    id="success-user-phone"></strong> sous 2 heures pour vous fournir vos identifiants.
+                            </p>
+                            <button type="button" class="btn btn-primary" id="btn-success-reset">Fermer</button>
                         </div>
-                        <h3>Demande Reçue !</h3>
-                        <p>Merci <strong id="success-user-name"></strong>. Votre demande d'activation a été enregistrée
-                            avec succès.</p>
-                        <p class="success-details">Un conseiller Atlas Flow vous contactera au <strong
-                                id="success-user-phone"></strong> sous 2 heures pour vous fournir vos identifiants.</p>
-                        <button type="button" class="btn btn-primary" id="btn-success-reset">Fermer</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -577,7 +685,7 @@
                 <div class="footer-brand">
                     <a href="#" class="logo">
                         <div class="logo-icon">
-                            <img src="images/logo.png" alt="Logo">
+                            <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36" loading="lazy">
                         </div>
                         <span>Atlas Flow</span>
                     </a>
@@ -585,19 +693,19 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>Produit</h4>
+                    <h3>Produit</h3>
                     <ul class="footer-links">
                         <li><a href="#features">Fonctionnalités</a></li>
                         <li><a href="#modules">Modules</a></li>
                         <li><a href="#pricing">Tarifs</a></li>
-                        <li><a href="#contact">Activer mon espace</a></li>
+                        <li><a href="#contact">Formulaire d'activation</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Contact & Support</h4>
+                    <h3>Contact & Support</h3>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/212611678243" target="_blank" rel="noopener noreferrer">WhatsApp
+                        <li><a href="https://wa.me/212607003733" target="_blank" rel="noopener noreferrer">WhatsApp
                                 direct</a></li>
                         <li><a href="mailto:atlasflow.online@gmail.com">contact@atlasflow.online</a></li>
                         <li><a href="#contact">Demander une démo</a></li>
@@ -606,17 +714,18 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2026</span> Atlas Flow. Tous droits réservés. • <a
-                        href="privacy-policy.html" style="color: inherit; text-decoration: underline;">Politique de
+                <p>&copy; <span id="current-year"></span> Atlas Flow. Tous droits réservés. • <a
+                        href="privacy-policy.html">Politique de
                         Confidentialité</a></p>
-                <p>Développé par <a href="https://zm-acquisition.com" target="_blank"
-                        style="color: inherit; text-decoration: underline;">ZM Acquisition</a></p>
+                <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+                <p>Développé par <a href="https://zm-acquisition.com" target="_blank" rel="noopener noreferrer">ZM
+                        Acquisition</a></p>
             </div>
         </div>
     </footer>
 
     <!-- External Script -->
-    <script src="script.js?v=1.1" defer></script>
+    <script src="script.js?v=1.2" defer></script>
 </body>
 
 </html>

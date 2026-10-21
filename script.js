@@ -1,18 +1,33 @@
 // Initialize Lucide Icons
-if (window.lucide) {
-    lucide.createIcons();
+function initLucide() {
+    if (window.lucide && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+    }
 }
 
-// Navbar Scroll Effect
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLucide);
+} else {
+    initLucide();
+}
+
+// Navbar Scroll Effect (Optimized with requestAnimationFrame)
 const navbar = document.getElementById('navbar');
 if (navbar) {
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Mobile Menu Toggle
@@ -21,15 +36,12 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
+        const isActive = mobileMenu.classList.toggle('active');
+        menuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
         const icon = menuBtn.querySelector('i');
         if (icon) {
-            if (mobileMenu.classList.contains('active')) {
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                icon.setAttribute('data-lucide', 'menu');
-            }
-            if (window.lucide) lucide.createIcons();
+            icon.setAttribute('data-lucide', isActive ? 'x' : 'menu');
+            initLucide();
         }
     });
 
@@ -37,57 +49,72 @@ if (menuBtn && mobileMenu) {
     document.querySelectorAll('.mobile-menu a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
             const icon = menuBtn.querySelector('i');
             if (icon) {
                 icon.setAttribute('data-lucide', 'menu');
-                if (window.lucide) lucide.createIcons();
+                initLucide();
             }
         });
     });
 }
 
-// Scroll Reveal Animation
+// Scroll Reveal Animation (Zero Forced Reflow with IntersectionObserver)
 const reveals = document.querySelectorAll('.reveal');
-const revealOnScroll = () => {
-    for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add('active');
-        }
-    }
-};
-
 if (reveals.length > 0) {
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px 0px -40px 0px',
+            threshold: 0.1
+        });
+
+        reveals.forEach(el => revealObserver.observe(el));
+    } else {
+        reveals.forEach(el => el.classList.add('active'));
+    }
 }
 
-// Active Link Highlighting for Main Navigation
+// Active Link Highlighting for Main Navigation (Optimized with rAF)
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
 if (sections.length > 0 && navLinks.length > 0) {
+    let navTicking = false;
     window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (window.pageYOffset >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
+        if (!navTicking) {
+            window.requestAnimationFrame(() => {
+                let current = '';
+                const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollPos >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
 
-        if (current) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href && (href.includes(`#${current}`) || href === `#${current}`)) {
-                    link.classList.add('active');
+                if (current) {
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href && (href.includes(`#${current}`) || href === `#${current}`)) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
                 }
+                navTicking = false;
             });
+            navTicking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Legal Table of Contents (TOC) Active Link on Scroll
@@ -118,9 +145,15 @@ if (legalArticles.length > 0 && tocLinks.length > 0) {
 }
 
 // Dynamic Copyright Year
-const yearElement = document.getElementById('current-year');
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+function updateYear() {
+    const yr = new Date().getFullYear();
+    document.querySelectorAll('#current-year, .current-year').forEach(el => {
+        el.textContent = yr;
+    });
+}
+updateYear();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateYear);
 }
 
 // Custom Select Elements

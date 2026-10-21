@@ -17,30 +17,48 @@
     <title>Politique de Confidentialité | Atlas Flow</title>
     <meta name="description"
         content="Politique de confidentialité d'Atlas Flow. Vos données de gestion vous appartiennent à 100%. Aucun partage avec des tiers.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://atlasflow.online/privacy-policy.html">
 
-    <!-- Google Fonts: Inter -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://atlasflow.online/privacy-policy.html">
+    <meta property="og:title" content="Politique de Confidentialité | Atlas Flow">
+    <meta property="og:description"
+        content="Politique de confidentialité d'Atlas Flow. Vos données de gestion vous appartiennent à 100%. Aucun partage avec des tiers.">
+    <meta property="og:image" content="https://atlasflow.online/images/logo.webp">
+    <meta property="og:site_name" content="Atlas Flow">
+    <meta property="og:locale" content="fr_MA">
+
+    <!-- Google Fonts: Inter (Non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    </noscript>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+
+    <!-- Lucide Icons CDN (Minified & Deferred) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.2">
 </head>
 
 <body>
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="skip-to-content">Passer au contenu principal</a>
 
     <!-- Navbar -->
     <nav id="navbar">
         <div class="container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-                    <img src="images/logo.png" alt="Atlas Flow Logo">
+                    <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36">
                 </div>
                 <span>Atlas Flow</span>
             </a>
@@ -53,8 +71,8 @@
 
             <div class="nav-cta">
                 <a href="index.html#contact" class="btn btn-primary">Activer mon espace</a>
-                <button class="menu-toggle" id="menu-btn" aria-label="Menu principal">
-                    <i data-lucide="menu"></i>
+                <button class="menu-toggle" id="menu-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-lucide="menu" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -67,6 +85,9 @@
         <a href="index.html#pricing">Tarifs</a>
         <a href="index.html#contact" class="btn btn-primary">Activer mon espace</a>
     </div>
+
+    <!-- Main Content Landmark -->
+    <main id="main-content">
 
     <!-- Hero Section -->
     <section class="legal-hero">
@@ -86,7 +107,7 @@
     </section>
 
     <!-- Simple Policy Body -->
-    <main class="legal-page-body">
+    <div class="legal-page-body">
         <div class="container">
             <div class="legal-simple-container">
 
@@ -187,8 +208,8 @@
                             Pour toute question relative à votre logiciel ou à la confidentialité de vos informations, vous pouvez nous contacter directement :
                         </p>
                         <div class="legal-highlight-box">
-                            <p><strong>WhatsApp direct :</strong> <a href="https://wa.me/212611678243" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600;">+212 6 11 67 82 43</a></p>
-                            <p style="margin-top: 8px;"><strong>Email :</strong> <a href="mailto:contact@atlasflow.online" style="color: var(--primary); font-weight: 600;">contact@atlasflow.online</a></p>
+                            <p><strong>WhatsApp direct :</strong> <a href="https://wa.me/212607003733" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 600;">+212 6 07 00 37 33</a></p>
+                            <p style="margin-top: 8px;"><strong>Email :</strong> <a href="mailto:atlasflow.online@gmail.com" style="color: var(--primary); font-weight: 600;">contact@atlasflow.online</a></p>
                             <p style="margin-top: 8px;"><strong>Développement :</strong> Conçu et développé par ZM Acquisition</p>
                         </div>
                     </div>
@@ -196,6 +217,7 @@
 
             </div>
         </div>
+    </div>
     </main>
 
     <!-- Footer -->
@@ -205,7 +227,7 @@
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
                         <div class="logo-icon">
-                            <img src="images/logo.png" alt="Logo">
+                            <img src="images/logo.webp" alt="Logo Atlas Flow" width="36" height="36" loading="lazy">
                         </div>
                         <span>Atlas Flow</span>
                     </a>
@@ -213,35 +235,36 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>Produit</h4>
+                    <h3>Produit</h3>
                     <ul class="footer-links">
                         <li><a href="index.html#features">Fonctionnalités</a></li>
                         <li><a href="index.html#modules">Modules</a></li>
                         <li><a href="index.html#pricing">Tarifs</a></li>
-                        <li><a href="index.html#contact">Activer mon espace</a></li>
+                        <li><a href="index.html#contact">Formulaire d'activation</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Contact & Support</h4>
+                    <h3>Contact & Support</h3>
                     <ul class="footer-links">
-                        <li><a href="https://wa.me/212611678243" target="_blank" rel="noopener noreferrer">WhatsApp direct</a></li>
-                        <li><a href="mailto:contact@atlasflow.online">contact@atlasflow.online</a></li>
+                        <li><a href="https://wa.me/212607003733" target="_blank" rel="noopener noreferrer">WhatsApp direct</a></li>
+                        <li><a href="mailto:atlasflow.online@gmail.com">contact@atlasflow.online</a></li>
                         <li><a href="index.html#contact">Demander une démo</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2026</span> Atlas Flow. Tous droits réservés. • <a href="privacy-policy.html" style="color: inherit; text-decoration: underline;">Politique de Confidentialité</a></p>
+                <p>&copy; <span id="current-year"></span> Atlas Flow. Tous droits réservés. • <a href="privacy-policy.html">Politique de Confidentialité</a></p>
+                <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
                 <p>Développé par <a href="https://zm-acquisition.com" target="_blank"
-                        style="color: inherit; text-decoration: underline;">ZM Acquisition</a></p>
+                        rel="noopener noreferrer">ZM Acquisition</a></p>
             </div>
         </div>
     </footer>
 
     <!-- External Script -->
-    <script src="script.js?v=1.1" defer></script>
+    <script src="script.js?v=1.2" defer></script>
 </body>
 
 </html>
