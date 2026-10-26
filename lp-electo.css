@@ -32,7 +32,7 @@
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     --shadow-lg: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
     --shadow-glow: 0 12px 30px -5px rgba(29, 78, 216, 0.25);
-    --font-ar: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-ar: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Roboto, 'Geeza Pro', Arial, sans-serif;
     --font-brand: 'Anton', 'Impact', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
