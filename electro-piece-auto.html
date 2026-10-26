@@ -2,6 +2,16 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <!-- Preconnect hints to eliminate handshake latency on critical 3rd-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Preload LCP Mockup Image for instant discovery by mobile browsers -->
+    <link rel="preload" as="image" href="images/img1-mobile.webp" media="(max-width: 640px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/img1-opt.webp" media="(min-width: 641px)" fetchpriority="high">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TESZN3JE30"></script>
     <script>
@@ -35,13 +45,22 @@
             src="https://www.facebook.com/tr?id=26285528591106764&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Microsoft Clarity -->
+    <!-- Microsoft Clarity (Deferred to protect initial paint & TBT) -->
     <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "z2r4djsvbk");
+        function initClarity() {
+            if (window.clarityLoaded) return;
+            window.clarityLoaded = true;
+            (function (c, l, a, r, i, t, y) {
+                c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "z2r4djsvbk");
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(initClarity, { timeout: 2500 });
+        } else {
+            window.addEventListener('load', function () { setTimeout(initClarity, 1500); });
+        }
     </script>
 
     <meta charset="UTF-8">
@@ -50,8 +69,7 @@
     <meta name="description"
         content="نظام إدارة متكامل للأعمال التجارية والموزعين. تتبّع المخزون، إدارة المبيعات والمشتريات، متابعة ديون العملاء ومستحقات الموردين برؤية واضحة ومن منصة مركزية واحدة.">
 
-    <!-- Meta Ads Landing Page: Not for general indexing -->
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://atlasflow.online/electro-piece-auto">
 
     <!-- Open Graph for Meta Ads Sharing -->
@@ -59,20 +77,25 @@
     <meta property="og:title" content="Atlas Flow | نظام إدارة التجارة، المخزون، والحسابات">
     <meta property="og:description"
         content="نظّم المخزون، المبيعات، الفواتير، وحسابات العملاء والموردين في نظام واحد. احجز عرضك التوضيحي المجاني.">
-    <meta property="og:image" content="https://atlasflow.online/images/img1.webp">
+    <meta property="og:image" content="https://atlasflow.online/images/img1-opt.webp">
     <meta property="og:locale" content="ar_MA">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="images/logo.webp">
+    <link rel="icon" type="image/webp" href="images/logo-opt.webp">
 
-    <!-- High Readability Arabic Typography (Cairo) & Strong Brand Typography (Anton) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <!-- Non-Render-Blocking Arabic & Brand Typography (Cairo & Anton) -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700;800&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700;800&display=swap">
+    </noscript>
 
     <!-- Dedicated Stylesheet -->
-    <link rel="stylesheet" href="lp-electo.css?v=1.6">
+    <link rel="stylesheet" href="lp-electo.css?v=1.7">
 </head>
 
 <body>
@@ -82,7 +105,7 @@
         <div class="lp-container">
             <div class="lp-header-inner">
                 <a href="#hero" class="lp-brand">
-                    <img src="images/logo.webp" alt="Atlas Flow Logo" class="lp-brand-logo" width="42" height="42">
+                    <img src="images/logo-opt.webp" alt="Atlas Flow Logo" class="lp-brand-logo" width="42" height="42" decoding="async">
                     <div class="lp-brand-text">
                         <span class="lp-brand-name">Atlas Flow</span>
                         <span class="lp-brand-tagline">نظام إدارة وتطوير العمليات التجارية للمحلات والمستودعات</span>
@@ -160,29 +183,32 @@
                         <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">● نظام متكامل</span>
                     </div>
 
-                    <img src="images/img1.webp" alt="واجهة نظام إدارة المبيعات، المخزون، والحسابات Atlas Flow"
-                        class="lp-mockup-img" width="1000" height="450" loading="eager">
+                    <img src="images/img1-opt.webp"
+                        srcset="images/img1-mobile.webp 640w, images/img1-opt.webp 1100w"
+                        sizes="(max-width: 640px) 100vw, 1000px"
+                        alt="واجهة نظام إدارة المبيعات، المخزون، والحسابات Atlas Flow"
+                        class="lp-mockup-img" width="1000" height="450" loading="eager" decoding="async" fetchpriority="high">
 
                     <!-- 3 Benefit Pillars Under Mockup -->
                     <div class="lp-features-strip">
                         <div class="lp-feature-pill">
                             <div class="lp-pill-icon lp-pill-blue">📦</div>
                             <div class="lp-pill-content">
-                                <h4>إدارة المخزون</h4>
+                                <span class="lp-pill-title">إدارة المخزون</span>
                             </div>
                         </div>
 
                         <div class="lp-feature-pill">
                             <div class="lp-pill-icon lp-pill-green">💳</div>
                             <div class="lp-pill-content">
-                                <h4>متابعة الديون </h4>
+                                <span class="lp-pill-title">متابعة الديون</span>
                             </div>
                         </div>
 
                         <div class="lp-feature-pill">
                             <div class="lp-pill-icon lp-pill-amber">📑</div>
                             <div class="lp-pill-content">
-                                <h4> تنظيم فواتير البيع والشراء</h4>
+                                <span class="lp-pill-title">تنظيم فواتير البيع والشراء</span>
                             </div>
                         </div>
                     </div>
@@ -251,7 +277,7 @@
                 <div class="lp-booking-card">
 
                     <div class="lp-booking-banner">
-                        <h3>هل Atlas Flow مناسب لنشاطك التجاري؟</h3>
+                        <h2>هل Atlas Flow مناسب لنشاطك التجاري؟</h2>
                         <p>احجز عرضاً توضيحياً مجانياً لمدة 30 دقيقة، واكتشف كيف يمكن للنظام مساعدتك على تنظيم تجارتك
                         </p>
                     </div>
@@ -260,10 +286,10 @@
 
                         <!-- Welcoming Qualification Checklist -->
                         <div class="lp-qualify-card">
-                            <h4 class="lp-qualify-title">
+                            <h3 class="lp-qualify-title">
                                 <span>📋</span>
                                 <span>قبل حجز موعدك، تأكد من ملاءمة هذا العرض لنشاطك:</span>
-                            </h4>
+                            </h3>
                             <ul class="lp-qualify-list">
                                 <li class="lp-qualify-item">
                                     <span class="lp-qualify-icon">✔</span>
@@ -289,18 +315,20 @@
                         </div>
 
                         <!-- ============================================================ -->
-                        <!-- CALENDLY EMBED SECTION                                       -->
+                        <!-- CALENDLY EMBED SECTION (High-Performance Lazy Loaded)        -->
                         <!-- ============================================================ -->
                         <div class="lp-calendly-wrapper" id="calendly-embed-target">
-                            <!-- Début de widget en ligne Calendly -->
-                            <div class="calendly-inline-widget"
+                            <!-- Calendly Inline Widget Container -->
+                            <div class="calendly-inline-widget" id="calendly-widget-container"
                                 data-url="https://calendly.com/mguitaaconsulting/atlass-flow?hide_gdpr_banner=1&background_color=ffffff&text_color=0f172a&primary_color=1d4ed8"
-                                style="min-width:100%;width:100%;"></div>
-                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
-                                async></script>
-                            <!-- Fin de widget en ligne Calendly -->
+                                style="min-width:100%;width:100%;">
+                                <!-- Sleek loading state while Calendly initializes -->
+                                <div class="lp-calendly-loading-state" id="calendly-loading-placeholder">
+                                    <div class="lp-cal-loader-spinner"></div>
+                                    <div class="lp-cal-loader-text">جاري تحضير جدول المواعيد المتاحة...</div>
+                                </div>
+                            </div>
                         </div>
-
                         <!-- ============================================================ -->
                         <!-- END CALENDLY EMBED SECTION                                  -->
                         <!-- ============================================================ -->
@@ -317,7 +345,7 @@
         <div class="lp-container">
             <div class="lp-footer-content">
                 <div class="lp-footer-brand">
-                    <img src="images/logo.webp" alt="Atlas Flow Logo" width="26" height="26">
+                    <img src="images/logo-opt.webp" alt="Atlas Flow Logo" width="26" height="26" loading="lazy" decoding="async">
                     <span>Atlas Flow</span>
                 </div>
                 <p class="lp-footer-text">
@@ -343,6 +371,76 @@
         // Update current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // ============================================================
+        // CALENDLY HIGH-PERFORMANCE LAZY LOADING
+        // Defers ~2.9MB of scripts & stylesheets away from critical path
+        // ============================================================
+        let calendlyLoaded = false;
+        function loadCalendly() {
+            if (calendlyLoaded) return;
+            calendlyLoaded = true;
+
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://assets.calendly.com/assets/external/widget.js';
+            script.async = true;
+            script.onload = function () {
+                // Remove loading placeholder once iframe is created
+                const checkIframe = setInterval(function () {
+                    const container = document.getElementById('calendly-widget-container');
+                    if (container && container.querySelector('iframe')) {
+                        clearInterval(checkIframe);
+                        const placeholder = document.getElementById('calendly-loading-placeholder');
+                        if (placeholder) {
+                            placeholder.style.display = 'none';
+                        }
+                    }
+                }, 150);
+                setTimeout(function () {
+                    clearInterval(checkIframe);
+                    const placeholder = document.getElementById('calendly-loading-placeholder');
+                    if (placeholder) placeholder.style.display = 'none';
+                }, 4000);
+            };
+            document.body.appendChild(script);
+        }
+
+        // 1. Intersection Observer: Trigger when user scrolls within 600px of booking section
+        const bookingTarget = document.getElementById('demo-booking');
+        if ('IntersectionObserver' in window && bookingTarget) {
+            const observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        loadCalendly();
+                        obs.disconnect();
+                    }
+                });
+            }, { rootMargin: '600px 0px' });
+            observer.observe(bookingTarget);
+        } else {
+            window.addEventListener('load', function () {
+                setTimeout(loadCalendly, 3000);
+            });
+        }
+
+        // 2. User Intent: Trigger immediately if user clicks any CTA button leading to booking
+        document.querySelectorAll('a[href="#demo-booking"]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                loadCalendly();
+            });
+        });
+
+        // 3. User Activity Fallback: Trigger after first user interaction (scroll, touch, keydown)
+        function onFirstInteraction() {
+            loadCalendly();
+            window.removeEventListener('scroll', onFirstInteraction);
+            window.removeEventListener('touchstart', onFirstInteraction);
+            window.removeEventListener('keydown', onFirstInteraction);
+        }
+        window.addEventListener('scroll', onFirstInteraction, { passive: true, once: true });
+        window.addEventListener('touchstart', onFirstInteraction, { passive: true, once: true });
+        window.addEventListener('keydown', onFirstInteraction, { passive: true, once: true });
+
         // Conversion tracking helper for buttons
         function trackLeadClick(actionLabel) {
             if (typeof fbq === 'function') {
@@ -356,20 +454,29 @@
             }
         }
 
-        // Listen for Calendly booking event to send Lead & Schedule events to Meta Pixel & GA4
+        // Listen for Calendly booking event to send Lead event to Meta Pixel & GA4, then redirect
         window.addEventListener('message', function (e) {
-            if (e.data && e.data.event && e.data.event === 'calendly.event_scheduled') {
+            var data = e.data;
+            if (typeof data === 'string') {
+                try { data = JSON.parse(data); } catch (err) { }
+            }
+            if (data && data.event && data.event === 'calendly.event_scheduled') {
+                // Meta Pixel: Track Lead event only
                 if (typeof fbq === 'function') {
-                    fbq('track', 'Schedule');
                     fbq('track', 'Lead');
                 }
+                // Google Analytics (GA4): Track Lead event only
                 if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', { 'send_to': 'G-TESZN3JE30' });
-                    gtag('event', 'schedule_meeting', {
-                        'event_category': 'Calendly',
-                        'event_label': 'Consultation Demo Booked'
+                    gtag('event', 'generate_lead', {
+                        event_category: 'Calendly',
+                        event_label: 'Consultation Demo Booked'
                     });
+                    gtag('event', 'lead');
                 }
+                // Redirect user to the Thank You page
+                setTimeout(function () {
+                    window.location.href = 'merci.html?lang=ar';
+                }, 600);
             }
         });
 

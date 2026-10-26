@@ -10,8 +10,8 @@
         gtag('js', new Date());
 
         gtag('config', 'G-TESZN3JE30');
-        // Register conversion event in GA4
-        gtag('event', 'conversion', { 'send_to': 'G-TESZN3JE30' });
+        // Register lead event in GA4
+        gtag('event', 'generate_lead');
     </script>
 
     <!-- Meta Pixel Code -->
@@ -36,6 +36,15 @@
             src="https://www.facebook.com/tr?id=26285528591106764&ev=Lead&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "z2r4djsvbk");
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Merci pour votre demande | Atlas Flow</title>
@@ -44,14 +53,10 @@
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://atlasflow.online/merci.html">
 
-    <!-- Google Fonts: Inter (Non-render-blocking) -->
+    <!-- Google Fonts: Inter, Cairo & Anton -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="images/logo.webp">
@@ -61,6 +66,271 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css?v=1.2">
+
+    <!-- Enhanced Spacious Layout for Thank You Page (Arabic RTL & Mobile Width Fix) -->
+    <style>
+        .thankyou-wrapper {
+            padding: 80px 16px 60px;
+        }
+
+        .thankyou-card {
+            max-width: 680px;
+            width: 100%;
+            padding: 44px 32px;
+        }
+
+        .thankyou-steps {
+            padding: 24px 22px;
+        }
+
+        /* Centered Brand Header for Arabic Page */
+        .thankyou-centered-header {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 34px 16px 10px;
+        }
+
+        .thankyou-brand-center {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .thankyou-brand-center img {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+
+        .thankyou-brand-name {
+            font-family: 'Anton', Impact, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.85rem;
+            color: #0F172A;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        /* Specific RTL & Arabic Enhancements (No Navbar, No Footer, Centered Logo) */
+        html[dir="rtl"] #navbar,
+        html[dir="rtl"] footer {
+            display: none !important;
+        }
+
+        html[dir="rtl"] .thankyou-centered-header {
+            display: flex !important;
+        }
+
+        html[dir="rtl"] .thankyou-wrapper {
+            min-height: calc(100vh - 120px);
+            padding: 16px 16px 50px;
+        }
+
+        html[dir="rtl"] body {
+            font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+            text-align: right;
+            direction: rtl;
+        }
+
+        html[dir="rtl"] .thankyou-card {
+            text-align: center;
+        }
+
+        html[dir="rtl"] .thankyou-card h1 {
+            font-size: 2rem;
+            line-height: 1.35;
+            font-weight: 800;
+        }
+
+        html[dir="rtl"] .thankyou-subtitle {
+            font-size: 1.08rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 26px;
+        }
+
+        html[dir="rtl"] .thankyou-steps {
+            text-align: right;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+        }
+
+        html[dir="rtl"] .thankyou-steps-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        html[dir="rtl"] .thankyou-step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+            font-size: 0.98rem;
+            line-height: 1.65;
+            color: var(--text);
+        }
+
+        html[dir="rtl"] .thankyou-step-num {
+            width: 26px;
+            height: 26px;
+            min-width: 26px;
+            background: #1D4ED8;
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            font-weight: 800;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        html[dir="rtl"] .thankyou-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        /* WhatsApp Button - Vibrant Brand Green for all versions */
+        #thankyou-whatsapp-btn {
+            background: #25D366 !important;
+            color: #FFFFFF !important;
+            border: none !important;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.32);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #thankyou-whatsapp-btn:hover {
+            background: #1EBE5D !important;
+            color: #FFFFFF !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+        }
+
+        #thankyou-home-btn {
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 24px;
+            border-radius: 12px;
+            border: 1.5px solid #CBD5E1;
+            color: #334155;
+            background: #FFFFFF;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        #thankyou-home-btn:hover {
+            border-color: #94A3B8;
+            color: #0F172A;
+            background: #F8FAFC;
+            transform: translateY(-2px);
+        }
+
+        html[dir="rtl"] #thankyou-whatsapp-btn {
+            font-weight: 800;
+            width: 100%;
+            max-width: 340px;
+        }
+
+        /* Mobile Viewport Optimization (max-width: 640px) */
+        @media (max-width: 640px) {
+            .thankyou-centered-header {
+                padding: 24px 12px 6px;
+            }
+
+            .thankyou-brand-center img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .thankyou-brand-name {
+                font-size: 1.6rem;
+            }
+
+            html[dir="rtl"] .thankyou-wrapper {
+                padding: 10px 10px 40px;
+            }
+
+            .thankyou-card {
+                padding: 30px 16px;
+                border-radius: 20px;
+            }
+
+            html[dir="rtl"] .thankyou-card h1 {
+                font-size: 1.65rem;
+            }
+
+            html[dir="rtl"] .thankyou-subtitle {
+                font-size: 0.98rem;
+                margin-bottom: 22px;
+            }
+
+            .thankyou-steps {
+                padding: 18px 14px;
+            }
+
+            html[dir="rtl"] .thankyou-step-item {
+                font-size: 0.92rem;
+                gap: 10px;
+                margin-bottom: 12px;
+            }
+        }
+
+        /* Extra small devices (<= 380px, e.g. Android 360px) */
+        @media (max-width: 380px) {
+            .thankyou-wrapper {
+                padding: 24px 6px 36px;
+            }
+
+            .thankyou-card {
+                padding: 24px 10px;
+                border-radius: 16px;
+            }
+
+            .thankyou-steps {
+                padding: 14px 10px;
+                border-radius: 12px;
+            }
+
+            html[dir="rtl"] .thankyou-step-item {
+                font-size: 0.88rem;
+                gap: 8px;
+            }
+
+            html[dir="rtl"] .thankyou-step-num {
+                width: 22px;
+                height: 22px;
+                min-width: 22px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -89,18 +359,26 @@
         </div>
     </nav>
 
+    <!-- Centered Main Logo for Arabic Thank-You Page -->
+    <header id="thankyou-arabic-header" class="thankyou-centered-header">
+        <div class="thankyou-brand-center">
+            <img src="images/logo.webp" alt="Atlas Flow Logo" width="48" height="48">
+            <span class="thankyou-brand-name">Atlas Flow</span>
+        </div>
+    </header>
+
     <!-- Main Content Landmark -->
     <main id="main-content" class="thankyou-wrapper">
         <div class="thankyou-card">
             <div class="thankyou-icon">
                 <i data-lucide="check-circle-2"></i>
             </div>
-            <h1>Demande Reçue avec Succès !</h1>
+            <h1 id="thankyou-title">Demande Reçue avec Succès !</h1>
             <p class="thankyou-subtitle" id="thankyou-message">
                 Merci <strong id="lead-name"></strong> ! Nous avons bien reçu votre demande.
             </p>
 
-            <div class="thankyou-steps">
+            <div class="thankyou-steps" id="thankyou-steps">
                 <div class="thankyou-steps-title">
                     <i data-lucide="clock"></i>
                     <span>Que va-t-il se passer maintenant ?</span>
@@ -126,12 +404,12 @@
             </div>
 
             <div class="thankyou-actions">
-                <a href="https://wa.me/212700763053?text=Bonjour%20Atlas%20Flow%2C%20je%20viens%20d%27envoyer%20ma%20demande%20d%27activation." class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/212700763053?text=Bonjour%20Atlas%20Flow%2C%20je%20viens%20d%27envoyer%20ma%20demande%20d%27activation." class="btn btn-primary" id="thankyou-whatsapp-btn" target="_blank" rel="noopener noreferrer">
                     <i data-lucide="message-circle" style="width: 18px; height: 18px; margin-right: 8px;"></i>
-                    <span>Accélérer sur WhatsApp</span>
+                    <span id="thankyou-whatsapp-text">Accélérer sur WhatsApp</span>
                 </a>
-                <a href="index.html" class="btn btn-outline">
-                    <span>Retour à l'accueil</span>
+                <a href="index.html" class="btn btn-outline" id="thankyou-home-btn">
+                    <span id="thankyou-home-text">Retour à l'accueil</span>
                 </a>
             </div>
         </div>
@@ -182,16 +460,92 @@
     <!-- Scripts -->
     <script src="script.js?v=1.2" defer></script>
     <script>
-        // Personalize thank you greeting from URL params
+        // Personalize thank you greeting and support Arabic from electro-piece-auto.html
         document.addEventListener('DOMContentLoaded', function () {
             const params = new URLSearchParams(window.location.search);
+            const isAr = params.get('lang') === 'ar';
             const name = params.get('name');
             const nameEl = document.getElementById('lead-name');
             const msgEl = document.getElementById('thankyou-message');
-            if (name && nameEl) {
-                nameEl.textContent = name;
-            } else if (!name && msgEl) {
-                msgEl.textContent = "Nous avons bien reçu votre demande.";
+
+            if (isAr) {
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+                document.title = 'Atlas Flow | تم تأكيد حجز موعدك بنجاح';
+                document.body.style.fontFamily = "'Cairo', system-ui, -apple-system, sans-serif";
+
+                // Remove menu and footer for clean Arabic thank you page
+                const navEl = document.getElementById('navbar');
+                if (navEl) navEl.style.display = 'none';
+
+                const footerEl = document.querySelector('footer');
+                if (footerEl) footerEl.style.display = 'none';
+
+                const arHeader = document.getElementById('thankyou-arabic-header');
+                if (arHeader) arHeader.style.display = 'flex';
+
+                const titleEl = document.getElementById('thankyou-title');
+                if (titleEl) titleEl.textContent = 'تم حجز موعدك بنجاح! 🎉';
+
+                if (msgEl) {
+                    msgEl.innerHTML = name
+                        ? `شكراً <strong id="lead-name">${name}</strong>! تم تسجيل موعد العرض التوضيحي الخاص بك بنجاح.`
+                        : 'شكراً لك! تم تسجيل موعد العرض التوضيحي الخاص بنظام <strong>Atlas Flow</strong> بنجاح.';
+                }
+
+                const stepsEl = document.getElementById('thankyou-steps');
+                if (stepsEl) {
+                    stepsEl.innerHTML = `
+                        <div class="thankyou-steps-title">
+                            <i data-lucide="clock"></i>
+                            <span>ماذا سيحدث الآن؟</span>
+                        </div>
+                        <div class="thankyou-step-item">
+                            <div class="thankyou-step-num">1</div>
+                            <div>
+                                <strong>تأكيد الموعد</strong>: ستصلك رسالة تأكيد عبر البريد الإلكتروني تتضمن تفاصيل الموعد ورابط اللقاء.
+                            </div>
+                        </div>
+                        <div class="thankyou-step-item">
+                            <div class="thankyou-step-num">2</div>
+                            <div>
+                                <strong>العرض التوضيحي المباشر</strong>: سنلتقي في الموعد المحدد لاستعراض نظام Atlas Flow وكيف يلائم طريقة عملك.
+                            </div>
+                        </div>
+                        <div class="thankyou-step-item">
+                            <div class="thankyou-step-num">3</div>
+                            <div>
+                                <strong>الإجابة عن استفساراتك</strong>: سنجيب عن كل أسئلتك ونوضح لك خطوات بدء العمل وتسهيل تجارتك.
+                            </div>
+                        </div>
+                    `;
+                }
+
+                const waBtn = document.getElementById('thankyou-whatsapp-btn');
+                const waText = document.getElementById('thankyou-whatsapp-text');
+                if (waBtn) {
+                    waBtn.href = 'https://wa.me/212700763053?text=' + encodeURIComponent('مرحباً Atlas Flow، قمت بحجز موعد لعرض توضيحي وأرغب في تأكيد التفاصيل.');
+                    waBtn.style.minWidth = '240px';
+                }
+                if (waText) {
+                    waText.textContent = 'تواصل سريع عبر واتساب';
+                }
+
+                // Remove return to landing page button to prevent double-booking
+                const homeBtn = document.getElementById('thankyou-home-btn');
+                if (homeBtn) {
+                    homeBtn.style.display = 'none';
+                }
+
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            } else {
+                if (name && nameEl) {
+                    nameEl.textContent = name;
+                } else if (!name && msgEl) {
+                    msgEl.textContent = "Nous avons bien reçu votre demande.";
+                }
             }
         });
     </script>
