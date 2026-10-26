@@ -2,6 +2,15 @@
 <html lang="fr">
 
 <head>
+    <script>
+        // Immediate synchronous redirect for Arabic visitors to dedicated Arabic page
+        (function () {
+            var search = window.location.search || '';
+            if (/lang[=_\-—–]ar/i.test(search) || /[?&]ar\b/i.test(search)) {
+                window.location.replace('merci-ar.html' + search);
+            }
+        })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TESZN3JE30"></script>
     <script>
@@ -462,9 +471,10 @@
     <script>
         // Personalize thank you greeting and support Arabic from electro-piece-auto.html
         document.addEventListener('DOMContentLoaded', function () {
-            const params = new URLSearchParams(window.location.search);
-            const isAr = params.get('lang') === 'ar';
-            const name = params.get('name');
+            const search = window.location.search || '';
+            const params = new URLSearchParams(search);
+            const isAr = params.get('lang') === 'ar' || /lang[=_\-—–]ar/i.test(search) || params.has('ar') || params.has('lang-ar') || params.has('lang—ar') || params.has('lang–ar');
+            const name = params.get('name') || params.get('invitee_full_name');
             const nameEl = document.getElementById('lead-name');
             const msgEl = document.getElementById('thankyou-message');
 
