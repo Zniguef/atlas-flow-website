@@ -326,6 +326,9 @@
                                 <div class="lp-calendly-loading-state" id="calendly-loading-placeholder">
                                     <div class="lp-cal-loader-spinner"></div>
                                     <div class="lp-cal-loader-text">جاري تحضير جدول المواعيد المتاحة...</div>
+                                    <button type="button" id="btn-load-calendly-now" class="lp-cal-now-btn" onclick="loadCalendly()">
+                                        <span>📅 عرض جدول المواعيد الآن</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -372,8 +375,9 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         // ============================================================
-        // CALENDLY HIGH-PERFORMANCE LAZY LOADING
-        // Defers ~2.9MB of scripts & stylesheets away from critical path
+        // CALENDLY STRICT DEFERRED LOADING
+        // Loads ONLY after the entire page finishes loading (window.load)
+        // AND when the user actually reaches the booking section (or clicks CTA)
         // ============================================================
         let calendlyLoaded = false;
         function loadCalendly() {
@@ -405,41 +409,44 @@
             document.body.appendChild(script);
         }
 
-        // 1. Intersection Observer: Trigger when user scrolls within 600px of booking section
-        const bookingTarget = document.getElementById('demo-booking');
-        if ('IntersectionObserver' in window && bookingTarget) {
-            const observer = new IntersectionObserver(function (entries, obs) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        loadCalendly();
-                        obs.disconnect();
-                    }
-                });
-            }, { rootMargin: '600px 0px' });
-            observer.observe(bookingTarget);
-        } else {
-            window.addEventListener('load', function () {
-                setTimeout(loadCalendly, 3000);
-            });
-        }
-
-        // 2. User Intent: Trigger immediately if user clicks any CTA button leading to booking
-        document.querySelectorAll('a[href="#demo-booking"]').forEach(function (btn) {
+        // 1. Direct User Intent: Click on ANY booking CTA button triggers Calendly immediately
+        document.querySelectorAll('a[href="#demo-booking"], #btn-load-calendly-now').forEach(function (btn) {
             btn.addEventListener('click', function () {
                 loadCalendly();
             });
         });
 
-        // 3. User Activity Fallback: Trigger after first user interaction (scroll, touch, keydown)
-        function onFirstInteraction() {
-            loadCalendly();
-            window.removeEventListener('scroll', onFirstInteraction);
-            window.removeEventListener('touchstart', onFirstInteraction);
-            window.removeEventListener('keydown', onFirstInteraction);
+        // 2. Strict Deferred Trigger: ONLY starts after the page is 100% loaded
+        function initDeferredCalendly() {
+            const bookingTarget = document.getElementById('demo-booking');
+            if ('IntersectionObserver' in window && bookingTarget) {
+                const observer = new IntersectionObserver(function (entries, obs) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            loadCalendly();
+                            obs.disconnect();
+                        }
+                    });
+                }, { rootMargin: '100px 0px', threshold: 0.05 });
+                observer.observe(bookingTarget);
+            }
+
+            // Fallback idle background preload (after 4s of page load)
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(function () {
+                    setTimeout(loadCalendly, 4000);
+                }, { timeout: 8000 });
+            } else {
+                setTimeout(loadCalendly, 5000);
+            }
         }
-        window.addEventListener('scroll', onFirstInteraction, { passive: true, once: true });
-        window.addEventListener('touchstart', onFirstInteraction, { passive: true, once: true });
-        window.addEventListener('keydown', onFirstInteraction, { passive: true, once: true });
+
+        // Ensure page finishes loading completely first before watching or preloading Calendly
+        if (document.readyState === 'complete') {
+            initDeferredCalendly();
+        } else {
+            window.addEventListener('load', initDeferredCalendly);
+        }
 
         // Conversion tracking helper for buttons
         function trackLeadClick(actionLabel) {
