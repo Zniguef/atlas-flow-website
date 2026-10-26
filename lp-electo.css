@@ -792,9 +792,31 @@ body {
 
 /* Calendly Embed Container */
 .lp-calendly-wrapper {
-    min-height: 480px;
+    min-height: 700px;
     width: 100%;
     position: relative;
+    direction: ltr; /* Force LTR so calendar days aren't misaligned or clipped in RTL context */
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.calendly-inline-widget {
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 720px;
+    position: relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.calendly-inline-widget iframe {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    border: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Clean Placeholder UI shown before Calendly code is inserted */
@@ -1119,8 +1141,113 @@ body {
         font-size: 1.5rem;
     }
     
+    .lp-booking-section {
+        padding: 35px 0 25px;
+    }
+
+    .lp-booking-section .lp-container {
+        padding: 0 8px; /* Maximize available width for mobile screens */
+    }
+
+    .lp-booking-card {
+        border-radius: var(--radius-md);
+        border-width: 1.5px;
+        box-shadow: var(--shadow-md);
+    }
+
+    .lp-booking-banner {
+        padding: 20px 14px;
+    }
+
     .lp-booking-banner h3 {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
+        line-height: 1.35;
+    }
+
+    .lp-booking-banner p {
+        font-size: 0.9rem;
+    }
+
+    /* Zero horizontal padding on body so Calendly widget gets full width without clipping */
+    .lp-booking-body {
+        padding: 18px 0 10px;
+    }
+
+    .lp-qualify-card {
+        margin: 0 10px 18px;
+        padding: 16px 12px;
+        border-radius: var(--radius-sm);
+    }
+
+    .lp-calendly-wrapper {
+        min-height: 980px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+
+    .calendly-inline-widget {
+        height: 980px !important;
+        min-height: 980px !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+
+    .calendly-inline-widget iframe {
+        height: 980px !important;
+        min-height: 980px !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+}
+
+/* Extra-small screens (e.g. Android 360px and below) */
+@media (max-width: 380px) {
+    .lp-booking-section .lp-container {
+        padding: 0 4px; /* Give maximum possible space to Calendly */
+    }
+
+    .lp-booking-card {
+        border-radius: 10px;
+        border-width: 1px;
+    }
+
+    .lp-booking-banner {
+        padding: 16px 10px;
+    }
+
+    .lp-booking-banner h3 {
+        font-size: 1.15rem;
+    }
+
+    .lp-qualify-card {
+        margin: 0 6px 14px;
+        padding: 14px 10px;
+    }
+
+    .lp-calendly-wrapper {
+        min-height: 1000px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+
+    .calendly-inline-widget {
+        height: 1000px !important;
+        min-height: 1000px !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+    }
+
+    .calendly-inline-widget iframe {
+        height: 1000px !important;
+        min-height: 1000px !important;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
     }
 }
 
