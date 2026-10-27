@@ -57,7 +57,7 @@ body {
     line-height: 1.65;
     font-size: 16px;
     overflow-x: hidden;
-    padding-bottom: 70px; /* Space for mobile sticky CTA */
+    padding-bottom: 75px;
 }
 
 @media (min-width: 769px) {
@@ -942,6 +942,176 @@ body {
     margin-top: 10px;
 }
 
+/* Step-by-Step Booking Guide (Below Calendly) */
+.lp-booking-guide {
+    margin-top: 26px;
+    padding: 22px 18px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-md);
+    text-align: right;
+}
+
+.lp-guide-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lp-guide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #EFF6FF;
+    color: var(--primary-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+    border: 1px solid #BFDBFE;
+    margin-bottom: 8px;
+}
+
+.lp-guide-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.lp-guide-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 640px) {
+    .lp-guide-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .lp-guide-steps {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.lp-guide-step {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-sm);
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.lp-guide-step:hover {
+    border-color: #BFDBFE;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.lp-guide-step-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.lp-step-badge {
+    width: 24px;
+    height: 24px;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-size: 0.78rem;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lp-step-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.lp-step-title {
+    font-size: 0.92rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 4px;
+    line-height: 1.35;
+}
+
+.lp-step-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+.lp-guide-help {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .lp-guide-help {
+        flex-direction: row;
+        text-align: right;
+    }
+}
+
+.lp-guide-help-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.lp-guide-help-text {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.lp-guide-help-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.lp-guide-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #FFFFFF;
+    font-size: 0.88rem;
+    font-weight: 800;
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.lp-guide-whatsapp-btn:hover {
+    background: #1EBE5D;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+
 /* Alternative Contact (WhatsApp Quick Link) */
 .lp-direct-whatsapp-box {
     margin-top: 25px;
@@ -1117,62 +1287,6 @@ body {
     border: 1px solid #A7F3D0;
     padding: 5px 14px;
     border-radius: var(--radius-full);
-}
-
-/* Mobile Sticky Bottom CTA Bar */
-.lp-mobile-sticky-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid var(--border);
-    padding: 10px 16px;
-    z-index: 999;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-@media (min-width: 769px) {
-    .lp-mobile-sticky-bar {
-        display: none;
-    }
-}
-
-.lp-sticky-btn-main {
-    flex: 1;
-    background: var(--primary);
-    color: #FFFFFF;
-    font-family: var(--font-ar);
-    font-weight: 800;
-    font-size: 1rem;
-    padding: 12px 14px;
-    border-radius: var(--radius-sm);
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    box-shadow: var(--shadow-sm);
-}
-
-.lp-sticky-btn-whatsapp {
-    width: 44px;
-    height: 44px;
-    background: #25D366;
-    color: #FFFFFF;
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    text-decoration: none;
-    flex-shrink: 0;
 }
 
 /* Responsive adjustments */
@@ -1381,5 +1495,4 @@ body {
     padding-top: 10px;
     border-top: 1px solid #E2E8F0;
 }
-
 
